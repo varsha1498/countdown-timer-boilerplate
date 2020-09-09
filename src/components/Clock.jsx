@@ -18,11 +18,12 @@ class Clock extends React.Component {
 
     render() {
         var {timeInSeconds} = this.props;
+        var stringTime = this.formatTime(timeInSeconds);
         //Keep the classes name. Try to inject your code and do not remove existing code
         return (
             <div className="clock">
                 <span className="clock-text">
-                  
+                  {stringTime}
                 </span>
             </div>
         );
