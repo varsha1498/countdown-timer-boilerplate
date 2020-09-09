@@ -13,10 +13,14 @@ class Countdown extends React.Component {
       this.countDownTimer = this.countDownTimer.bind(this);
   }
   onSetCountdownTime(secondstr){
+    const seconds = +secondstr;
+    if(seconds>0){
     this.setState({
-        count: +secondstr
+        count: seconds
     })
     this.countDownTimer();
+    }
+
   }
   countDownTimer(){
     setInterval(() => {
